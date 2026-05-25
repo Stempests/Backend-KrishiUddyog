@@ -59,6 +59,5 @@ const listingSchema = new Schema<IListing>(
 listingSchema.index({ cropName: 1, status: 1, 'location.state': 1 });
 listingSchema.index({ sellerId: 1, status: 1 });
 listingSchema.index({ expiresAt: 1 }, { expireAfterSeconds: 0 });
-listingSchema.index({ 'location.coordinates': '2dsphere' });
 
 export const ListingModel = mongoose.model<IListing>('Listing', listingSchema);
