@@ -3,6 +3,7 @@ import { CorsOptions } from 'cors';
 const allowedOrigins = [
   'http://localhost:3000',
   'http://localhost:3001',
+  'https://krishiuddyog.vercel.app',
   process.env.CLIENT_URL,
 ].filter(Boolean) as string[];
 
