@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: krishiuddyog-backend
+    env: node
+    plan: free
+    region: oregon
+    branch: master
+    buildCommand: npm install --production=false && npm run build
+    startCommand: npm run start
+    envVars:
+      - key: NODE_ENV
+        value: production
